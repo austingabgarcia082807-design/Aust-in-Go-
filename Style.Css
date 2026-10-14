@@ -1,0 +1,562 @@
+/* GENERAL RESET & BASE STYLES */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: #7b7d80; /* Gray background matching template */
+    color: #000;
+}
+
+/* HEADER NAVIGATION */
+.header {
+    background-color: #000;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    height: 75px;
+    border-bottom: 2px solid #222;
+}
+
+.nav-container {
+    max-width: 1400px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+    padding: 0 30px;
+}
+
+.nav-logo {
+    height: 50px;
+    object-fit: contain;
+}
+
+.nav-menu {
+    display: flex;
+    gap: 35px;
+}
+
+.nav-link {
+    color: #fff;
+    text-decoration: none;
+    font-size: 24px;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+    color: #e50914;
+}
+
+.hamburger {
+    display: none;
+    flex-direction: column;
+    gap: 6px;
+    cursor: pointer;
+}
+
+.hamburger span {
+    width: 30px;
+    height: 3px;
+    background-color: #fff;
+    transition: 0.3s;
+}
+
+/* HERO SECTION (SECTION 1 & SECTION 5) */
+.hero-section, .contact-section {
+    position: relative;
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    padding-top: 75px;
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(240, 240, 240, 0.75); /* Bright atmospheric overlay */
+}
+
+.hero-content-wrapper {
+    position: relative;
+    z-index: 2;
+    max-width: 1300px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding: 0 40px;
+}
+
+.hero-left-card {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.hero-logo-large {
+    max-width: 420px;
+    width: 100%;
+    height: auto;
+}
+
+.hero-right-content {
+    flex: 1.2;
+}
+
+.hero-title {
+    font-size: 42px;
+    font-weight: 900;
+    line-height: 1.15;
+    color: #000;
+    margin-bottom: 25px;
+    letter-spacing: 1px;
+}
+
+.hero-desc-box {
+    border: 3px solid #8A2BE2; /* Purple outline box from screenshot */
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.6);
+    border-radius: 4px;
+    margin-bottom: 25px;
+}
+
+.hero-desc-box p {
+    font-size: 17px;
+    line-height: 1.5;
+    color: #111;
+}
+
+.start-btn {
+    display: inline-block;
+    background-color: #000;
+    color: #fff;
+    font-size: 28px;
+    font-weight: 900;
+    padding: 12px 45px;
+    text-decoration: none;
+    border-radius: 8px;
+    letter-spacing: 2px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    transition: background 0.3s;
+}
+
+.start-btn:hover {
+    background-color: #e50914;
+}
+
+/* SECTION 2: OUR CARS */
+.cars-section {
+    padding: 120px 40px 80px 40px;
+    background-color: #7b7d80;
+}
+
+.section-container {
+    max-width: 1300px;
+    margin: 0 auto;
+}
+
+.cars-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+.car-card {
+    background-color: #000;
+    border-radius: 4px;
+    padding: 25px 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.4);
+}
+
+.car-img-box {
+    width: 100%;
+    height: 200px;
+    background: #fff;
+    border-radius: 4px;
+    overflow: hidden;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.car-img-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.car-specs {
+    list-style: none;
+    color: #fff;
+    font-size: 14px;
+    line-height: 1.6;
+    margin-bottom: 25px;
+    padding-left: 5px;
+}
+
+.car-specs li {
+    margin-bottom: 8px;
+}
+
+.price-btn {
+    background-color: #fff;
+    color: #000;
+    font-size: 22px;
+    font-weight: 900;
+    padding: 12px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    text-align: center;
+    width: 100%;
+    transition: background 0.3s, color 0.3s;
+}
+
+.price-btn:hover {
+    background-color: #e50914;
+    color: #fff;
+}
+
+/* SECTION 3: RENTAL GUIDE */
+.guide-section {
+    padding: 120px 40px 80px 40px;
+    background-color: #7b7d80;
+}
+
+.guide-container {
+    max-width: 1300px;
+    margin: 0 auto;
+    display: flex;
+    gap: 50px;
+    align-items: flex-start;
+}
+
+.guide-left {
+    flex: 1.8;
+}
+
+.section-heading {
+    font-size: 42px;
+    font-weight: 900;
+    color: #000;
+    margin-bottom: 15px;
+    letter-spacing: 0.5px;
+}
+
+.section-subheading {
+    font-size: 18px;
+    color: #111;
+    margin-bottom: 35px;
+    line-height: 1.4;
+}
+
+.steps-list {
+    list-style: none;
+}
+
+.steps-list li {
+    margin-bottom: 22px;
+}
+
+.steps-list strong {
+    display: block;
+    font-size: 18px;
+    color: #000;
+    margin-bottom: 3px;
+}
+
+.steps-list span {
+    font-size: 15px;
+    color: #222;
+}
+
+.guide-right {
+    flex: 1;
+}
+
+.requirements-box {
+    background-color: #000;
+    color: #fff;
+    padding: 30px;
+    border-radius: 6px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.4);
+}
+
+.requirements-box h3 {
+    font-size: 26px;
+    font-weight: 900;
+    margin-bottom: 20px;
+    letter-spacing: 1px;
+}
+
+.requirements-box ul {
+    list-style: disc;
+    padding-left: 20px;
+    font-size: 15px;
+    line-height: 1.8;
+}
+
+/* SECTION 4: ABOUT US / WHY BOOK US */
+.about-section {
+    padding: 120px 40px 80px 40px;
+    background-color: #7b7d80;
+}
+
+.about-container {
+    max-width: 1300px;
+    margin: 0 auto;
+    display: flex;
+    gap: 60px;
+    align-items: center;
+}
+
+.about-left {
+    flex: 1.5;
+}
+
+.about-point {
+    margin-bottom: 20px;
+}
+
+.about-point h4 {
+    font-size: 20px;
+    font-weight: bold;
+    color: #000;
+    margin-bottom: 5px;
+}
+
+.about-point p {
+    font-size: 16px;
+    color: #1a1a1a;
+}
+
+.about-mission-vision {
+    margin-top: 35px;
+}
+
+.about-mission-vision h3 {
+    font-size: 18px;
+    font-weight: 900;
+    color: #000;
+    margin-top: 20px;
+    margin-bottom: 5px;
+    letter-spacing: 0.5px;
+}
+
+.about-mission-vision p {
+    font-size: 15px;
+    color: #1a1a1a;
+    line-height: 1.5;
+}
+
+.about-right {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.about-fleet-stack {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    width: 100%;
+    max-width: 450px;
+}
+
+.about-fleet-stack img {
+    width: 100%;
+    height: 170px;
+    object-fit: cover;
+    border-radius: 6px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+}
+
+/* SECTION 5: CONTACT US */
+.contact-section {
+    height: 100vh;
+}
+
+.contact-content-container {
+    position: relative;
+    z-index: 2;
+    max-width: 1300px;
+    margin: 0 auto;
+    padding: 0 40px;
+    width: 100%;
+}
+
+.contact-main-title {
+    font-size: 46px;
+    font-weight: 900;
+    color: #000;
+    margin-bottom: 30px;
+    line-height: 1.15;
+}
+
+.contact-list {
+    list-style: none;
+    font-size: 20px;
+    font-weight: bold;
+    color: #111;
+    line-height: 2.2;
+}
+
+/* FOOTER */
+.footer {
+    background-color: #000;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+    font-size: 14px;
+}
+
+/* BOOKING MODAL POPUP */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 2000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.7);
+    align-items: center;
+    justify-content: center;
+}
+
+.modal-content {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 8px;
+    width: 90%;
+    max-width: 450px;
+    position: relative;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+}
+
+.close-btn {
+    position: absolute;
+    right: 20px;
+    top: 15px;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.modal-content h2 {
+    margin-bottom: 5px;
+    font-size: 24px;
+}
+
+.modal-car-title {
+    color: #e50914;
+    font-weight: bold;
+    margin-bottom: 20px;
+    font-size: 16px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    font-size: 14px;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 15px;
+}
+
+.modal-submit-btn {
+    width: 100%;
+    background-color: #000;
+    color: #fff;
+    padding: 12px;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: background 0.3s;
+}
+
+.modal-submit-btn:hover {
+    background-color: #e50914;
+}
+
+/* RESPONSIVE DESIGN */
+@media (max-width: 1024px) {
+    .cars-grid {
+        grid-template-columns: 1fr;
+        max-width: 500px;
+        margin: 0 auto;
+    }
+    .guide-container, .about-container, .hero-content-wrapper {
+        flex-direction: column;
+    }
+    .hero-section, .contact-section {
+        height: auto;
+        padding: 140px 0 80px 0;
+    }
+}
+
+@media (max-width: 768px) {
+    .nav-menu {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 75px;
+        left: 0;
+        width: 100%;
+        background-color: #000;
+        padding: 20px 0;
+        text-align: center;
+        gap: 20px;
+        border-bottom: 2px solid #333;
+    }
+    .nav-menu.active {
+        display: flex;
+    }
+    .hamburger {
+        display: flex;
+    }
+    .hero-title {
+        font-size: 30px;
+    }
+    .section-heading {
+        font-size: 32px;
+    }
+    .contact-main-title {
+        font-size: 32px;
+    }
+}
